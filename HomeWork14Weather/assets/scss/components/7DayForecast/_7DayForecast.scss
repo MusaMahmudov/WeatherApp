@@ -1,0 +1,67 @@
+$BACKGROUND-COLOR: #212b38;
+
+.daysForecast {
+  background: $BACKGROUND-COLOR;
+  border-radius: 20px;
+  margin-top: 50px;
+  width: 25%;
+
+  padding: 20px;
+  .heading {
+    & h1 {
+      color: rgb(203, 196, 196);
+      font-size: 18px;
+    }
+  }
+  .info {
+    height: 100%;
+    & ul {
+      width: 100%;
+      list-style: none;
+      padding: 0px;
+      height: 98%;
+      display: grid;
+      grid-template-columns: auto;
+      & li {
+        justify-content: space-between;
+        & i {
+          color: white;
+          font-size: 25px;
+        }
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+          border-bottom: 1px solid white;
+        }
+        & .mid {
+          width: 100px;
+          align-items: center;
+          justify-content: space-between;
+        }
+        & h1 {
+          font-size: 18px;
+          color: rgb(203, 196, 196);
+        }
+        & h2 {
+          font-size: 18px;
+        }
+        & .mid {
+          display: flex;
+        }
+        & .stateIconSun {
+          animation-name: sunLight;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+
+          display: inline-block;
+          border-radius: 50%;
+          height: 30px;
+          width: 30px;
+          background: orange;
+          box-shadow: 0 0 10px orange, 0 0 60px orange, 0 0 200px yellow,
+            inset 0 0 80px yellow;
+        }
+      }
+    }
+  }
+}

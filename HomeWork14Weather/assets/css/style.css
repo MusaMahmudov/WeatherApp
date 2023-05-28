@@ -1,0 +1,373 @@
+body {
+  background: rgb(1, 1, 33);
+}
+
+#container {
+  display: flex;
+  margin: 10px 0px 0px 10px;
+}
+
+aside {
+  width: 80px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background: #212b38;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
+}
+.buttons button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background: #212b38;
+  justify-content: space-around;
+  height: 60px;
+  font-size: 18px;
+}
+.buttons button:hover {
+  color: white;
+}
+
+.windIcon {
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  background: #1d73e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+.windIcon i {
+  color: aqua;
+}
+
+main {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+form {
+  width: 100%;
+}
+form button {
+  margin-top: 10px;
+  background: #212b38;
+  color: white;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+}
+
+.search {
+  width: 100%;
+}
+.search input {
+  width: 100%;
+  border: none;
+  background: #212b38;
+  height: 30px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: white;
+}
+.search input:focus {
+  outline: none;
+}
+.search input::-moz-placeholder {
+  color: white;
+}
+.search input::placeholder {
+  color: white;
+}
+
+@keyframes sunLight {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+.currentWeather {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.currentWeather .right {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.currentWeather .right .stateIcon {
+  display: inline-block;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  background: orange;
+  box-shadow: 0 0 10px orange, 0 0 60px orange, 0 0 200px yellow, inset 0 0 80px yellow;
+  animation-name: sunLight;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.currentWeather .left {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.currentWeather .left .heading h1 {
+  color: white;
+  margin: 0px;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+.currentWeather .left .heading p {
+  margin: 0px;
+  color: rgb(203, 196, 196);
+}
+.currentWeather .left .currentTemperature {
+  color: white;
+  font-size: 50px;
+}
+
+.todayWeather {
+  margin-top: 30px;
+  width: 97%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 20px;
+  background: #212b38;
+}
+.todayWeather .content {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.todayWeather .content .hours {
+  width: 100%;
+}
+.todayWeather .content .hours ul {
+  color: rgb(203, 196, 196);
+  list-style: none;
+  display: flex;
+  padding: 0px;
+  width: 100%;
+  margin: 25px auto;
+}
+.todayWeather .content .hours ul li {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.todayWeather .content .hours ul li .stateIconSunCloud {
+  width: 45px;
+  height: 45px;
+  position: relative;
+}
+.todayWeather .content .hours ul li .stateIconSunCloud .stateIconSun {
+  animation-name: sunLight;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+.todayWeather .content .hours ul li .stateIconSunCloud i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.todayWeather .content .hours ul li .stateIconSun {
+  animation-name: sunLight;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  margin-top: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background: orange;
+  box-shadow: 0 0 10px orange, 0 0 60px orange, 0 0 200px yellow, inset 0 0 80px yellow;
+}
+.todayWeather .content .hours ul li h1 {
+  margin-bottom: 0px;
+}
+.todayWeather .content .hours ul li:not(:last-child) {
+  border-right: 1px solid rgb(203, 196, 196);
+}
+.todayWeather .content .hours ul li .time {
+  color: rgb(203, 196, 196);
+  margin: 0px;
+}
+.todayWeather .content .hours ul li i {
+  margin-top: 15px;
+  font-size: 30px;
+}
+.todayWeather .content .heading h1 {
+  margin: 0px;
+  font-size: 13px;
+  color: rgb(203, 196, 196);
+}
+
+.airConditions {
+  background: #212b38;
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 97%;
+  padding: 20px;
+}
+.airConditions .content {
+  display: flex;
+  flex-direction: column;
+}
+.airConditions .content .measurement {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+.airConditions .content .measurement .left {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  margin-left: 10px;
+}
+.airConditions .content .measurement .left h1 {
+  color: rgb(203, 196, 196);
+  font-size: 17px;
+  margin: 20px 0px 5px 0px;
+}
+.airConditions .content .measurement .left h1 i {
+  margin-right: 10px;
+}
+.airConditions .content .measurement .left p {
+  color: white;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.airConditions .content .measurement .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+.airConditions .content .measurement .right h1 {
+  color: rgb(203, 196, 196);
+  font-size: 17px;
+  margin: 20px 0px 5px 0px;
+}
+.airConditions .content .measurement .right h1 i {
+  margin-right: 10px;
+}
+.airConditions .content .measurement .right p {
+  color: white;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 80px;
+}
+.airConditions .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.airConditions .heading h1 {
+  color: rgb(203, 196, 196);
+  margin: 0px;
+  font-size: 15px;
+}
+.airConditions .heading button {
+  border: none;
+  background: rgb(0, 142, 237);
+  border-radius: 10px;
+  color: white;
+  padding: 3px 12px;
+}
+
+.daysForecast {
+  background: #212b38;
+  border-radius: 20px;
+  margin-top: 50px;
+  width: 25%;
+  padding: 20px;
+}
+.daysForecast .heading h1 {
+  color: rgb(203, 196, 196);
+  font-size: 18px;
+}
+.daysForecast .info {
+  height: 100%;
+}
+.daysForecast .info ul {
+  width: 100%;
+  list-style: none;
+  padding: 0px;
+  height: 98%;
+  display: grid;
+  grid-template-columns: auto;
+}
+.daysForecast .info ul li {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.daysForecast .info ul li i {
+  color: white;
+  font-size: 25px;
+}
+.daysForecast .info ul li:not(:last-child) {
+  border-bottom: 1px solid white;
+}
+.daysForecast .info ul li .mid {
+  width: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+.daysForecast .info ul li h1 {
+  font-size: 18px;
+  color: rgb(203, 196, 196);
+}
+.daysForecast .info ul li h2 {
+  font-size: 18px;
+}
+.daysForecast .info ul li .mid {
+  display: flex;
+}
+.daysForecast .info ul li .stateIconSun {
+  animation-name: sunLight;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  display: inline-block;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background: orange;
+  box-shadow: 0 0 10px orange, 0 0 60px orange, 0 0 200px yellow, inset 0 0 80px yellow;
+}/*# sourceMappingURL=style.css.map */

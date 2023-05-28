@@ -1,0 +1,270 @@
+$BACKGROUND-COLOR: #212b38;
+main {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+}
+form {
+  width: 100%;
+  & button {
+    margin-top: 10px;
+    background: #212b38;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+  }
+}
+.search {
+  width: 100%;
+
+  & input {
+    width: 100%;
+
+    border: none;
+    background: $BACKGROUND-COLOR;
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: white;
+    }
+  }
+}
+@keyframes sunLight {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.currentWeather {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .right {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .stateIcon {
+      display: inline-block;
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+      background: orange;
+      box-shadow: 0 0 10px orange, 0 0 60px orange, 0 0 200px yellow,
+        inset 0 0 80px yellow;
+
+      animation-name: sunLight;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .left {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & .heading {
+      h1 {
+        color: white;
+        margin: 0px;
+        margin-bottom: 10px;
+        font-size: 40px;
+      }
+      p {
+        margin: 0px;
+
+        color: rgb(203, 196, 196);
+      }
+    }
+    & .currentTemperature {
+      color: white;
+      font-size: 50px;
+    }
+  }
+}
+.todayWeather {
+  margin-top: 30px;
+  width: 97%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 20px;
+  background: $BACKGROUND-COLOR;
+
+  & .content {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+
+    .hours {
+      width: 100%;
+      & ul {
+        color: rgb(203, 196, 196);
+        list-style: none;
+        display: flex;
+        padding: 0px;
+        width: 100%;
+        margin: 25px auto;
+
+        & li {
+          width: 250px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          & .stateIconSunCloud {
+            width: 45px;
+            height: 45px;
+            position: relative;
+            & .stateIconSun {
+              animation-name: sunLight;
+              animation-duration: 2s;
+              animation-iteration-count: infinite;
+              margin: 0;
+              position: absolute;
+              right: 0;
+              top: 5px;
+            }
+            & i {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              z-index: 100;
+            }
+          }
+
+          & .stateIconSun {
+            animation-name: sunLight;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            margin-top: 15px;
+
+            display: inline-block;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            background: orange;
+            box-shadow: 0 0 10px orange, 0 0 60px orange, 0 0 200px yellow,
+              inset 0 0 80px yellow;
+          }
+          & h1 {
+            margin-bottom: 0px;
+          }
+          &:not(:last-child) {
+            border-right: 1px solid rgb(203, 196, 196);
+          }
+
+          & .time {
+            color: rgb(203, 196, 196);
+            margin: 0px;
+          }
+          & i {
+            margin-top: 15px;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+
+    & .heading {
+      h1 {
+        margin: 0px;
+        font-size: 13px;
+        color: rgb(203, 196, 196);
+      }
+    }
+  }
+}
+.airConditions {
+  background: $BACKGROUND-COLOR;
+  border-radius: 20px;
+
+  margin-top: 20px;
+  width: 97%;
+  padding: 20px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    & .measurement {
+      width: 70%;
+      display: flex;
+
+      justify-content: space-between;
+      & .left {
+        display: flex;
+        flex-direction: column;
+        width: 160px;
+        margin-left: 10px;
+        & h1 {
+          color: rgb(203, 196, 196);
+          font-size: 17px;
+          margin: 20px 0px 5px 0px;
+          & i {
+            margin-right: 10px;
+          }
+        }
+        & p {
+          color: white;
+          font-size: 30px;
+          margin-top: 10px;
+          margin-left: 20px;
+        }
+      }
+      & .right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px;
+        & h1 {
+          color: rgb(203, 196, 196);
+          font-size: 17px;
+          margin: 20px 0px 5px 0px;
+          & i {
+            margin-right: 10px;
+          }
+        }
+        & p {
+          color: white;
+          font-size: 30px;
+          margin-top: 10px;
+          margin-left: 80px;
+        }
+      }
+    }
+  }
+  & .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & h1 {
+      color: rgb(203, 196, 196);
+      margin: 0px;
+      font-size: 15px;
+    }
+    & button {
+      border: none;
+      background: rgb(0, 142, 237);
+      border-radius: 10px;
+      color: white;
+      padding: 3px 12px;
+    }
+  }
+}

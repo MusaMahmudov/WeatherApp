@@ -1,0 +1,55 @@
+$BACKGROUND-COLOR: #212b38;
+
+body {
+  background: rgb(1, 1, 33);
+}
+#container {
+  display: flex;
+  margin: 10px 0px 0px 10px;
+}
+
+aside {
+  width: 80px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background: $BACKGROUND-COLOR;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
+  button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background: $BACKGROUND-COLOR;
+    justify-content: space-around;
+    height: 60px;
+    font-size: 18px;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.windIcon {
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  background: #1d73e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  & i {
+    color: aqua;
+  }
+}

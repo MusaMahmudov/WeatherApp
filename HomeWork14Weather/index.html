@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./main.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <aside>
+        <div class="windIcon"><i class="fa-solid fa-wind"></i></div>
+        <section class="buttons">
+          <button><i class="fa-solid fa-cloud-sun-rain"></i> Weather</button>
+          <button><i class="fa-solid fa-bars"></i> Cities</button>
+          <button><i class="fa-solid fa-map"></i>Map</button>
+          <button><i class="fa-solid fa-sliders"></i>Settings</button>
+        </section>
+      </aside>
+      <main>
+        <form action="#" type="submit">
+          <section class="search">
+            <input type="search" placeholder="Search for cities" />
+            <button class="searchBtn" type="submit">Search</button>
+        </form>
+        
+        </section>
+        <section class="currentWeather">
+          <section class="left">
+            <div class="heading">
+              <h1 class="city"></h1>
+              <p class="humidity2">Humidity</p>
+            </div>
+            <div class="currentTemperature"></div>
+          </section>
+          <section class="right">
+            <div class="stateIcon"></div>
+          </section>
+        </section>
+        <section class="todayWeather">
+          <div class="content">
+            <div class="heading"><h1>TODAY'S FORECAST</h1></div>
+            <div class="hours">
+              <ul>
+                <li>
+                  <p class="time">6:00 AM</p>
+                  <div class="stateIcon1">
+                    <i class="fa-solid fa-cloud"></i>
+                  </div>
+                  <h1 class="timeTemp"></h1>
+                </li>
+                <li>
+                  <p class="time">9:00 AM</p>
+                  <div class="stateIconSunCloud">
+                    <i class="fa-solid fa-cloud"></i>
+                    <div class="stateIconSun"></div>
+                  </div>
+                  <h1 class="timeTemp"></h1>
+                </li>
+                <li>
+                  <p class="time">12:00 PM</p>
+                  <div class="stateIconSun"></div>
+                  <h1 class="timeTemp"></h1>
+                </li>
+                <li>
+                  <p class="time">3:00 PM</p>
+                  <div class="stateIconSun"></div>
+                  <h1 class="timeTemp"></h1>
+                </li>
+                <li>
+                  <p class="time">6:00 PM</p>
+                  <div class="stateIconSun"></div>
+                  <h1 class="timeTemp"></h1>
+                </li>
+                <li>
+                  <p class="time">9:00 PM</p>
+                  <div class="stateIcon6">
+                    <i class="fa-solid fa-cloud"></i>
+                  </div>
+                  <h1 class="timeTemp"></h1>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="airConditions">
+          <div class="content">
+            <div class="heading">
+              <h1>AIR CONDITIONS</h1>
+              <button>See more</button>
+            </div>
+            <div class="measurement">
+              <div class="left">
+                <h1><i class="fa-solid fa-temperature-half"></i>Real Feel</h1>
+                <p class="realFeel"></p>
+              </div>
+              <div class="right">
+                <h1><i class="fa-solid fa-wind"></i>Wind</h1>
+              <p class="windSpeed"></p>
+
+              </div>
+
+            </div>
+            <div class="measurement">
+              <div class="left">
+                <h1><i class="fa-solid fa-smog"></i>Humidity</h1>
+                <p class="humidity">0%</p>
+              </div>
+              <div class="right">
+                <h1><i class="fa-solid fa-sun"></i>UV Index</h1>
+                <p class="UV">3</p>
+              </div>
+
+            </div>
+            
+        </section>
+      </main>
+      <div class="daysForecast">
+        <div class="heading"><h1>Forecast for the next 7 days</h1></div>
+         <div class="info">
+          <ul class="days">
+            <li class="day">
+              <h1 class="7days">Mon</h1>
+              <div class="mid"><div class="stateIconSun"></div><h1>Sunny</h1></div>
+              <h2>36/22</h2>
+
+            </li>
+            <li class="day">
+              <h1 class="7days">Tue</h1>
+              <div class="mid"><div class="stateIconSun"></div><h1>Sunny</h1></div>
+              <h2>34/25</h2>
+            </li>
+            <li class="day">
+              <h1 class="7days">Wed</h1>
+              <div class="mid"><div class="stateIconSun"></div><h1>Sunny</h1></div>
+              <h2>33/19</h2>
+            </li>
+            <li class="day">
+              <h1 class="7days">Thu</h1>
+              <div class="mid"><i class="fa-solid fa-cloud"></i>
+                <h1>Cloudy</h1></div>
+              <h2>38/23</h2>
+            </li>
+            <li class="day">
+              <h1 class="7days">Fri</h1>
+                   
+                    <div class="mid"> <i class="fa-solid fa-cloud"></i><h1>Cloudy</h1></div>
+              <h2>36/22</h2>
+            </li>
+            <li class="day">
+              <h1 class="7days">Sat</h1>
+              <div class="mid">
+                <i class="fa-solid fa-cloud"></i>
+                <h1>Cloudy</h1></div>
+              <h2>34/21</h2>
+            </li>
+            <li class="day">
+              <h1 class="7days">Sun</h1>
+              <div class="mid"><div class="stateIconSun"></div><h1>Sunny</h1></div>
+              <h2>35/25</h2>
+            </li>
+          </ul>
+         </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/8f2bd1d04c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
