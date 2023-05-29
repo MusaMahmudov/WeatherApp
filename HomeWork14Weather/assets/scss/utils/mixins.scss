@@ -1,0 +1,18 @@
+@mixin sun($height, $width) {
+  animation-name: sunLight;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  display: inline-block;
+  border-radius: 50%;
+  height: $height;
+  width: $width;
+  background: orange;
+  box-shadow: 0 0 10px orange, 0 0 60px orange, 0 0 200px yellow,
+    inset 0 0 80px yellow;
+}
+@mixin elementCentre() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

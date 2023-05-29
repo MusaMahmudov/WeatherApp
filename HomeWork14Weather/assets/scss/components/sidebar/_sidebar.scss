@@ -1,7 +1,9 @@
 $BACKGROUND-COLOR: #212b38;
+$mainTextColor: rgb(203, 196, 196);
+$bodyColor: rgb(1, 1, 33);
 
 body {
-  background: rgb(1, 1, 33);
+  background: $bodyColor;
 }
 #container {
   display: flex;

@@ -1,5 +1,5 @@
 $BACKGROUND-COLOR: #212b38;
-
+$mainTextColor: rgb(203, 196, 196);
 .daysForecast {
   background: $BACKGROUND-COLOR;
   border-radius: 20px;
@@ -9,7 +9,7 @@ $BACKGROUND-COLOR: #212b38;
   padding: 20px;
   .heading {
     & h1 {
-      color: rgb(203, 196, 196);
+      color: $mainTextColor;
       font-size: 18px;
     }
   }
@@ -40,7 +40,7 @@ $BACKGROUND-COLOR: #212b38;
         }
         & h1 {
           font-size: 18px;
-          color: rgb(203, 196, 196);
+          color: $mainTextColor;
         }
         & h2 {
           font-size: 18px;

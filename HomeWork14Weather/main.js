@@ -1,3 +1,6 @@
+let moon = document.getElementById("wrapper");
+let sun = document.getElementsByClassName("stateIcon")[0];
+
 async function getData(url) {
   try {
     let data = await fetch(url);
@@ -9,25 +12,36 @@ async function getData(url) {
 
 let search = document.getElementsByTagName("input")[0];
 let searchBtn = document.getElementsByClassName("searchBtn")[0];
-let currentUrl = "";
-searchBtn.addEventListener("click", () => {
+let currentUrl =
+  "http://api.weatherapi.com/v1/forecast.json?key=56b25a787f6f4e4e90372918232805&q=Baku&days=7&aqi=no&alerts=no";
+let form = document.getElementsByTagName("form")[0];
+getData(currentUrl).then((data) => {
+  allShow(data);
+});
+searchBtn.addEventListener("click", (event) => {
+  event.preventDefault();
   currentUrl = `http://api.weatherapi.com/v1/forecast.json?key=56b25a787f6f4e4e90372918232805&q=${search.value}&days=7&aqi=no&alerts=no`;
   getData(currentUrl)
     .then((data) => {
-      currentTemperatureShow(data);
-      realFeelShow(data);
-      windSpeedShow(data);
-      cityShow(data);
-      uvShow(data);
-      humidityShow(data);
-      humidityShow2(data);
-      todayForecastTimeShow(data);
-      sevenDaysForecastShow(data);
+      allShow(data);
     })
     .catch(() => {
       alert("error");
+      form.reset();
     });
 });
+function allShow(data) {
+  dayTime(data);
+  currentTemperatureShow(data);
+  realFeelShow(data);
+  windSpeedShow(data);
+  cityShow(data);
+  uvShow(data);
+  humidityShow(data);
+  humidityShow2(data);
+  todayForecastTimeShow(data);
+  sevenDaysForecastShow(data);
+}
 
 let currentTemperature =
   document.getElementsByClassName("currentTemperature")[0];
@@ -88,3 +102,28 @@ function sevenDaysForecastShow() {
     }
   });
 }
+
+function dayTime(data) {
+  let date = data.current.last_updated;
+  let index = date.indexOf(":");
+  let hour = date.slice(index - 2, index);
+  if (hour.at(0) == 0) {
+    hour = hour.charAt(1);
+  }
+  if (hour > 20 || hour < 6) {
+    moon.classList.remove("hidden");
+    sun.classList.add("hidden");
+  } else {
+    moon.classList.add("hidden");
+    sun.classList.remove("hidden");
+  }
+}
+
+// function showTime() {
+//   let date = new Date();
+//   let hour = date.getHours();
+//   let minute = date.getMinutes();
+//   let second = date.getSeconds();
+//   liveTime.innerHTML = `${hour}:${minute}:${second}`;
+// }
+// setInterval(showTime, 1000);
